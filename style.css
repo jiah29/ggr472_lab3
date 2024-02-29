@@ -3,6 +3,11 @@
 /** Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)                    */
 /** ========================================================================= */
 
+/** Disable vertical scrollbar */
+body {
+  overflow-y: hidden;
+}
+
 /* Styling for navbar */
 .navbar {
   border-bottom: solid 1px #d3d3d3;
@@ -16,16 +21,22 @@
 /* Styling for sidebar */
 #sidebar-container {
   height: 100vh;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   padding-top: 1rem;
   border-right: solid 1px #d3d3d3;
 
+  hr {
+    height: 2px;
+    width: 100%;
+  }
+
   #heading {
-    margin-bottom: 1rem;
     font-weight: bolder;
     font-size: 1.5rem;
     margin: auto;
     text-align: center;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .sidebar-item {
@@ -33,7 +44,7 @@
   }
 }
 
-/* Styling for main content section and the map container*/
+/* Styling for main map section and container*/
 #main-content {
   padding-left: 0;
   padding-right: 0;

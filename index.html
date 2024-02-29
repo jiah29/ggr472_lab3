@@ -25,6 +25,13 @@
   />
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <!-- Mapbox Geocoder -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.2/mapbox-gl-geocoder.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.2/mapbox-gl-geocoder.css"
+    type="text/css"
+  />
   <body>
     <!-- Main body section -->
     <div class="row" id="fullscreen-section">
@@ -40,6 +47,62 @@
           <li class="sidebar-item" id="heading">
             TTC Subway Stations Ridership
           </li>
+
+          <!-- A horizontal line separator-->
+          <hr />
+
+          <!-- Sidebar subheading for filter by subway line-->
+          <li class="sidebar-item">
+            <h6>Filter map data by subway line</h6>
+          </li>
+
+          <!-- Controls to fitler data by subway line through checkbox-->
+          <li class="sidebar-item">
+            <input type="checkbox" id="line1" class="line-checkbox" checked />
+            <label for="line1" class="line-label">Line 1</label>
+          </li>
+          <li class="sidebar-item">
+            <input type="checkbox" id="line2" class="line-checkbox" checked />
+            <label for="line2" class="line-label">Line 2</label>
+          </li>
+          <li class="sidebar-item">
+            <input type="checkbox" id="line3" class="line-checkbox" checked />
+            <label for="line3" class="line-label">Line 3</label>
+          </li>
+          <li class="sidebar-item">
+            <input type="checkbox" id="line4" class="line-checkbox" checked />
+            <label for="line4" class="line-label">Line 4</label>
+          </li>
+
+          <!-- A horizontal line separator-->
+          <hr />
+
+          <!-- Sidebar subheading for layer feature control -->
+          <li class="sidebar-item">
+            <h6>Toggle on or off layer feature here!</h6>
+          </li>
+
+          <!-- Controls to toggle on or off layer feature through checkbox-->
+          <li class="sidebar-item">
+            <input type="checkbox" id="line1" class="line-checkbox" checked />
+            <label for="line1" class="line-label">Subway Stations</label>
+          </li>
+          <li class="sidebar-item">
+            <input type="checkbox" id="line1" class="line-checkbox" checked />
+            <label for="line1" class="line-label">Subway Line</label>
+          </li>
+
+          <!-- A horizontal line separator-->
+          <hr />
+
+          <!-- Sidebar subheading for search section-->
+          <li class="sidebar-item">
+            <h6>Search by station</h6>
+          </li>
+
+          <!-- Search bar to search for subway station -->
+          <!-- provide dropdown list of subway stations -->
+          <li class="sidebar-item" id="geocoder"></li>
         </ul>
       </div>
 
