@@ -1,6 +1,6 @@
 /** ========================================================================= */
 /** This stylesheet is used for index.html                                    */
-/** Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)                    */
+/** Created by Jia Hao Choo for GGR472 Lab 3 (Winter 2024)                    */
 /** ========================================================================= */
 
 /* Styling for navbar */
@@ -13,18 +13,20 @@
   }
 }
 
-/* Styling for sidebar */
+/* Styling for sidebar container*/
 #sidebar-container {
   height: 100vh;
   padding-left: 2.5rem;
   padding-top: 1rem;
   border-right: solid 1px #d3d3d3;
 
+  /** Styling for horizontal line in sidebar*/
   hr {
     height: 2px;
     width: 100%;
   }
 
+  /** Styling for heading in sidebar */
   #heading {
     font-weight: bolder;
     font-size: 1.5rem;
@@ -34,12 +36,13 @@
     margin-bottom: 1rem !important;
   }
 
+  /** Styling for sidebar items */
   .sidebar-item {
     margin-bottom: 12px;
   }
 }
 
-/* Styling for main map section and container*/
+/* Styling for main map section and map container*/
 #main-content {
   padding-left: 0;
   padding-right: 0;

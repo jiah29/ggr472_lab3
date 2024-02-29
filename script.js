@@ -1,9 +1,6 @@
 // ============================================================================
 // This script is used for index.html and suggestions.html.
-// Some functions are from Bootstrap v5.0 documentation to support
-// Bootstrap-specific features, such as popovers.
-// Reference: https://getbootstrap.com/docs/5.0/
-// Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)
+// Created by Jia Hao Choo for GGR472 Lab 3 (Winter 2024)
 // ============================================================================
 
 /* ----------------------------------------------------------------------------

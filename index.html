@@ -3,7 +3,7 @@
   Built with Bootstrap v5.0 and FontAwesome.
   Bootstrap v5.0 Reference: https://getbootstrap.com/docs/5.0
   FontAwesome Reference: https://fontawesome.com/docs/web/ 
-  Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)
+  Created by Jia Hao Choo for GGR472 Lab 3 (Winter 2024)
 ------------------------------------------------------------------------------>
 
 <head>
@@ -35,14 +35,13 @@
   <body>
     <!-- Main body section -->
     <div class="row" id="fullscreen-section">
-      <!-- Sidebar section containing map controls and layer information -->
+      <!-- Sidebar section containing map controls and interactivity features -->
       <div
         class="col-3 bg-light text-black d-sm-block d-none"
         id="sidebar-container"
       >
+        <!-- Sidebar items list -->
         <ul class="nav flex-column align-items-center align-items-sm-start">
-          <!-- Sidebar items list -->
-
           <!-- Heading of sidebar (also acting as heading for webpage) -->
           <li class="sidebar-item" id="heading">
             TTC Subway Stations Ridership
@@ -51,12 +50,11 @@
           <!-- A horizontal line separator-->
           <hr />
 
-          <!-- Sidebar subheading for filter by subway line-->
+          <!-- Sidebar subheading for subway line filter section-->
           <li class="sidebar-item">
             <h6>Filter map data by subway line</h6>
           </li>
-
-          <!-- Controls to fitler data by subway line through checkbox-->
+          <!-- Controls to filter data by subway line through checkbox-->
           <li class="sidebar-item">
             <input type="checkbox" id="line1" class="line-checkbox" checked />
             <label for="line1" class="line-label">Line 1</label>
@@ -77,11 +75,10 @@
           <!-- A horizontal line separator-->
           <hr />
 
-          <!-- Sidebar subheading for layer feature control -->
+          <!-- Sidebar subheading for layer feature toggle control section-->
           <li class="sidebar-item">
             <h6>Toggle on or off layer feature here!</h6>
           </li>
-
           <!-- Controls to toggle on or off layer feature through checkbox-->
           <li class="sidebar-item">
             <input
@@ -113,9 +110,7 @@
           <li class="sidebar-item">
             <h6>Search by station</h6>
           </li>
-
-          <!-- Search bar to search for subway station -->
-          <!-- provide dropdown list of subway stations -->
+          <!-- Geocoder search bar -->
           <li class="sidebar-item" id="geocoder"></li>
         </ul>
       </div>
