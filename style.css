@@ -3,11 +3,6 @@
 /** Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)                    */
 /** ========================================================================= */
 
-/** Disable vertical scrollbar */
-body {
-  overflow-y: hidden;
-}
-
 /* Styling for navbar */
 .navbar {
   border-bottom: solid 1px #d3d3d3;

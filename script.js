@@ -95,6 +95,36 @@ map.on("load", () => {
     filter: ["in", "Line", ...shownLine],
   });
 
+  // Add another layer from the same source for highlighting purpose when mouse hovers over the station
+  map.addLayer({
+    id: "stations-highlight",
+    type: "circle",
+    source: "stations-data",
+    paint: {
+      "circle-radius": [
+        // linearly interpolate the radius of the circle based on the total ridership
+        "interpolate",
+        ["linear"],
+        ["get", "Total"],
+        // if total ridership is less than 1000, radius would be 5 (min)
+        1000,
+        10,
+        // if total ridership is more than 100000, radius would be total ridership / 12000 (max)
+        100000,
+        ["/", ["get", "Total"], 10000],
+      ],
+      "circle-color": "red",
+      "circle-opacity": 1,
+    },
+    layout: {
+      // set the visibility of this layer to none by default
+      // only show this layer when mouse hovers over the station
+      visibility: "none",
+    },
+    // add initial filter to only show stations specified in the shownLine array
+    filter: ["in", "Line", ...shownLine],
+  });
+
   // Add another layer from the same source with text symbol for each station's total ridership
   map.addLayer({
     id: "ridership-number",
@@ -105,7 +135,7 @@ map.on("load", () => {
       "text-font": ["Open Sans Regular"],
       "text-size": 12,
       // position the text label above the circle
-      "text-offset": [1, -2],
+      "text-offset": [0, 2],
     },
     paint: {
       "text-color": "#000000",
@@ -117,33 +147,36 @@ map.on("load", () => {
   });
 
   // Add subway routes data layer to the map
-  map.addLayer({
-    id: "lines",
-    type: "line",
-    source: "routes-data",
-    paint: {
-      "line-width": 2,
-      // give each route a different color based on the route
-      "line-color": [
-        "match",
-        ["get", "route_long_name"],
-        // if route is line 1, color would be yellow
-        "LINE 1 (YONGE-UNIVERSITY)",
-        "yellow",
-        // if route is lone 2, color would be green
-        "LINE 2 (BLOOR - DANFORTH)",
-        "green",
-        // if route is line 3, color would be blue
-        "LINE 3 (SCARBOROUGH)",
-        "blue",
-        // if route is line 4, color would be red
-        "LINE 4 (SHEPPARD)",
-        "red",
-        // unmatched data, color would be black
-        "black",
-      ],
+  map.addLayer(
+    {
+      id: "lines",
+      type: "line",
+      source: "routes-data",
+      paint: {
+        "line-width": 2,
+        // give each route a different color based on the route
+        "line-color": [
+          "match",
+          ["get", "route_long_name"],
+          // if route is line 1, color would be yellow
+          "LINE 1 (YONGE-UNIVERSITY)",
+          "yellow",
+          // if route is lone 2, color would be green
+          "LINE 2 (BLOOR - DANFORTH)",
+          "green",
+          // if route is line 3, color would be blue
+          "LINE 3 (SCARBOROUGH)",
+          "blue",
+          // if route is line 4, color would be red
+          "LINE 4 (SHEPPARD)",
+          "red",
+          // unmatched data, color would be black
+          "black",
+        ],
+      },
     },
-  });
+    "stations-highlight"
+  );
 });
 
 // Add event listener to the checkbox in sidebar for filtering out subway lines data on map
@@ -171,3 +204,25 @@ function addFilterByLineCheckboxChangeEventListener() {
 
 // Call the function to add event listener to the checkbox
 addFilterByLineCheckboxChangeEventListener();
+
+// Adding on hover event listener to the stations layer - when mouse enters the station
+map.on("mouseenter", "stations", (e) => {
+  // change cursor to pointer when mouse hovers over the station
+  map.getCanvas().style.cursor = "pointer";
+  // filter the stations highlight layer to only show the station that is being hovered
+  map.setFilter("stations-highlight", [
+    "==",
+    "OBJECTID",
+    e.features[0].properties.OBJECTID,
+  ]);
+  // show the stations highlight layer
+  map.setLayoutProperty("stations-highlight", "visibility", "visible");
+});
+
+// Adding on mouse leave event listener to the stations layer - when mouse leaves the station
+map.on("mouseleave", "stations", () => {
+  // change cursor back to default when mouse leaves the station
+  map.getCanvas().style.cursor = "";
+  // hide the stations highlight layer
+  map.setLayoutProperty("stations-highlight", "visibility", "none");
+});
