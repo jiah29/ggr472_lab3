@@ -95,7 +95,7 @@ map.on("load", () => {
     filter: ["in", "Line", ...shownLine],
   });
 
-  // Add another layer from the same source for highlighting purpose when mouse hovers over the station
+  // Add another layer from the same source for highlighting purpose when mouse hovers over one station
   map.addLayer({
     id: "stations-highlight",
     type: "circle",
@@ -131,11 +131,21 @@ map.on("load", () => {
     type: "symbol",
     source: "stations-data",
     layout: {
-      "text-field": ["get", "Total"],
+      // get the total ridership from the "Total" property and convert it to string
+      // then concatenate it with the text "Total Ridership: "
+      "text-field": [
+        "concat",
+        "Total Ridership: ",
+        ["to-string", ["get", "Total"]],
+      ],
       "text-font": ["Open Sans Regular"],
       "text-size": 12,
-      // position the text label above the circle
-      "text-offset": [0, 2],
+      // position the text label below the circle, the y offset is based on the total ridership
+      // since the radius of the circle is not constant to avoid overlapping
+      "text-offset": [
+        0,
+        ["interpolate", ["linear"], ["get", "Total"], 1000, 1, 100000, 3],
+      ],
     },
     paint: {
       "text-color": "#000000",
@@ -149,11 +159,17 @@ map.on("load", () => {
   // Add subway routes data layer to the map
   map.addLayer(
     {
-      id: "lines",
+      id: "routes",
       type: "line",
       source: "routes-data",
       paint: {
-        "line-width": 2,
+        // set line width based on feature state
+        "line-width": [
+          "case",
+          ["boolean", ["feature-state", "hover"], false],
+          6,
+          3,
+        ],
         // give each route a different color based on the route
         "line-color": [
           "match",
@@ -173,6 +189,10 @@ map.on("load", () => {
           // unmatched data, color would be black
           "black",
         ],
+      },
+      layout: {
+        // set the visibility of this layer to visible by default
+        visibility: "visible",
       },
       // add initial filter to only show stations specified in the shownLine array
       filter: ["in", "Line", ...shownLine],
@@ -199,9 +219,37 @@ for (let i = 1; i <= 4; i++) {
     map.setFilter("stations", ["in", "Line", ...shownLine]);
     map.setFilter("ridership-number", ["in", "Line", ...shownLine]);
     // update the filter for lines layer
-    map.setFilter("lines", ["in", "Line", ...shownLine]);
+    map.setFilter("routes", ["in", "Line", ...shownLine]);
   });
 }
+
+// Add event listener for subway stations layer toggle button in sidebar
+document
+  .getElementById("stations-toggle")
+  .addEventListener("change", function () {
+    // if the toggle button is checked, show the stations layer
+    if (this.checked) {
+      map.setLayoutProperty("stations", "visibility", "visible");
+      map.setLayoutProperty("ridership-number", "visibility", "visible");
+    } else {
+      // if the toggle button is unchecked, hide the stations layer
+      map.setLayoutProperty("stations", "visibility", "none");
+      map.setLayoutProperty("ridership-number", "visibility", "none");
+    }
+  });
+
+// Add event listener for subway routes layer toggle button in sidebar
+document
+  .getElementById("routes-toggle")
+  .addEventListener("change", function () {
+    // if the toggle button is checked, show the routes layer
+    if (this.checked) {
+      map.setLayoutProperty("routes", "visibility", "visible");
+    } else {
+      // if the toggle button is unchecked, hide the routes layer
+      map.setLayoutProperty("routes", "visibility", "none");
+    }
+  });
 
 // Adding on hover event listener to the stations layer - when mouse enters the station
 map.on("mouseenter", "stations", (e) => {
@@ -223,4 +271,78 @@ map.on("mouseleave", "stations", () => {
   map.getCanvas().style.cursor = "";
   // hide the stations highlight layer
   map.setLayoutProperty("stations-highlight", "visibility", "none");
+});
+
+// Add on click event to the stations layer - when user clicks on the station
+map.on("click", "stations-highlight", (e) => {
+  // get the station name from the clicked station's properties
+  const stationName = e.features[0].properties.Station_Name;
+  // get the station ridership from the clicked station's properties
+  const stationRidership = e.features[0].properties.Total;
+  // create a popup with the station name and ridership
+  new mapboxgl.Popup()
+    .setLngLat(e.lngLat)
+    .setHTML(
+      `<div style="line-height:normal">
+      <p style="font-weight: bold">${stationName}</p>
+      <p>Total ridership: ${stationRidership}</p>
+      <p>Line: ${e.features[0].properties.Line}</p>
+      <i class="fa-solid fa-search-plus" id="zoom-in"></i>
+      </div>`
+    )
+    .addTo(map);
+
+  // Add click event listener to the zoom-in icon in the popup
+  document.getElementById("zoom-in").addEventListener("click", () => {
+    // fly to the clicked station using the station's coordinates
+    map.flyTo({
+      center: [e.lngLat.lng, e.lngLat.lat],
+      zoom: 15,
+    });
+  });
+});
+
+// Add on click event on the route layer - when user clicks on the route
+map.on("click", "routes", (e) => {
+  // get the route name from the clicked route's properties
+  const routeName = e.features[0].properties.route_long_name;
+  // create a popup with the route name
+  new mapboxgl.Popup()
+    .setLngLat(e.lngLat)
+    .setHTML(
+      `
+    <p style="font-weight: bold">${routeName}</p>
+    <p> Total Number of Stations: ${e.features[0].properties.num_stations}</p>
+    `
+    )
+    .addTo(map);
+});
+
+// variable to keep track of which route is being hovered over, initially set to null
+var hoveredRouteId = null;
+
+// Add hover event listener to the routes layer - when mouse hovers over the route
+map.on("mouseenter", "routes", (e) => {
+  // change cursor to pointer when mouse hovers over the route
+  map.getCanvas().style.cursor = "pointer";
+  // update the hoveredRouteId to the id of the route being hovered
+  hoveredRouteId = e.features[0].id;
+  // set the hover feature state to true for the route
+  map.setFeatureState(
+    { source: "routes-data", id: hoveredRouteId },
+    { hover: true }
+  );
+});
+
+// Add mouse leave event listener to the routes layer - when mouse leaves the route
+map.on("mouseleave", "routes", () => {
+  // change cursor back to default when mouse leaves the route
+  map.getCanvas().style.cursor = "";
+  // set the hover feature state to false for the currently hovered route
+  map.setFeatureState(
+    { source: "routes-data", id: hoveredRouteId },
+    { hover: false }
+  );
+  // reset the hoveredRouteId to null
+  hoveredRouteId = null;
 });
