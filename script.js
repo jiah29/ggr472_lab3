@@ -174,36 +174,34 @@ map.on("load", () => {
           "black",
         ],
       },
+      // add initial filter to only show stations specified in the shownLine array
+      filter: ["in", "Line", ...shownLine],
     },
     "stations-highlight"
   );
 });
 
-// Add event listener to the checkbox in sidebar for filtering out subway lines data on map
-function addFilterByLineCheckboxChangeEventListener() {
-  // do the function for 4 times for each subway line
-  for (let i = 1; i <= 4; i++) {
-    document.getElementById(`line${i}`).addEventListener("change", function () {
-      if (this.checked) {
-        // if the checkbox is checked, add the line number to the shownLine array
-        // if it is not already in the array
-        if (!shownLine.includes(i)) {
-          shownLine.push(i);
-        }
-      } else {
-        // if the checkbox is unchecked, remove the line number from the shownLine array
-        // if it is in the array
-        shownLine = shownLine.filter((line) => line !== i);
+// Add event listener to all subway line checkbox in sidebar for filtering out subway lines data on map
+for (let i = 1; i <= 4; i++) {
+  document.getElementById(`line${i}`).addEventListener("change", function () {
+    if (this.checked) {
+      // if the checkbox is checked, add the line number to the shownLine array
+      // if it is not already in the array
+      if (!shownLine.includes(i)) {
+        shownLine.push(i);
       }
-      // update the filter for the stations and ridership-number layer
-      map.setFilter("stations", ["in", "Line", ...shownLine]);
-      map.setFilter("ridership-number", ["in", "Line", ...shownLine]);
-    });
-  }
+    } else {
+      // if the checkbox is unchecked, remove the line number from the shownLine array
+      // if it is in the array
+      shownLine = shownLine.filter((line) => line !== i);
+    }
+    // update the filter for the stations and ridership-number layer
+    map.setFilter("stations", ["in", "Line", ...shownLine]);
+    map.setFilter("ridership-number", ["in", "Line", ...shownLine]);
+    // update the filter for lines layer
+    map.setFilter("lines", ["in", "Line", ...shownLine]);
+  });
 }
-
-// Call the function to add event listener to the checkbox
-addFilterByLineCheckboxChangeEventListener();
 
 // Adding on hover event listener to the stations layer - when mouse enters the station
 map.on("mouseenter", "stations", (e) => {

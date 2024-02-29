@@ -709,7 +709,8 @@
       },
       "properties": {
         "OBJECTID": 1,
-        "route_long_name": "LINE 1 (YONGE-UNIVERSITY)"
+        "route_long_name": "LINE 1 (YONGE-UNIVERSITY)",
+        "Line": 1
       }
     },
     {
@@ -1235,7 +1236,8 @@
       },
       "properties": {
         "OBJECTID": 2,
-        "route_long_name": "LINE 2 (BLOOR - DANFORTH)"
+        "route_long_name": "LINE 2 (BLOOR - DANFORTH)",
+        "Line": 2
       }
     },
     {
@@ -1418,7 +1420,11 @@
           ]
         ]
       },
-      "properties": { "OBJECTID": 3, "route_long_name": "LINE 3 (SCARBOROUGH)" }
+      "properties": {
+        "OBJECTID": 3,
+        "route_long_name": "LINE 3 (SCARBOROUGH)",
+        "Line": 3
+      }
     },
     {
       "type": "Feature",
@@ -1480,7 +1486,11 @@
           [-79.347238999999945, 43.775053000000071]
         ]
       },
-      "properties": { "OBJECTID": 4, "route_long_name": "LINE 4 (SHEPPARD)" }
+      "properties": {
+        "OBJECTID": 4,
+        "route_long_name": "LINE 4 (SHEPPARD)",
+        "Line": 4
+      }
     }
   ]
 }
