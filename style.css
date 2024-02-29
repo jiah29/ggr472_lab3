@@ -1,0 +1,45 @@
+/** ========================================================================= */
+/** This stylesheet is used for index.html                                    */
+/** Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)                    */
+/** ========================================================================= */
+
+/* Styling for navbar */
+.navbar {
+  border-bottom: solid 1px #d3d3d3;
+
+  /* Center navbar title */
+  .navbar-brand {
+    margin: auto;
+  }
+}
+
+/* Styling for sidebar */
+#sidebar-container {
+  height: 100vh;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  border-right: solid 1px #d3d3d3;
+
+  #heading {
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+  }
+
+  .sidebar-item {
+    margin-bottom: 12px;
+  }
+}
+
+/* Styling for main content section and the map container*/
+#main-content {
+  padding-left: 0;
+  padding-right: 0;
+
+  .map-container {
+    width: 100%;
+    height: 100vh;
+  }
+}

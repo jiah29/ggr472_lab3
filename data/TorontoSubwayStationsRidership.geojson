@@ -1,0 +1,1337 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.415290999999968, 43.780847000000051]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Finch",
+        "To_Trains": 48380,
+        "From_Trains": 49078,
+        "Total": 97458,
+        "Opened": 133761600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.412754999999947, 43.767867000000081]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "North York Centre",
+        "To_Trains": 12037,
+        "From_Trains": 12152,
+        "Total": 24189,
+        "Opened": 550987200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.411690999999962, 43.761647000000039]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Sheppard-Yonge (line 4)",
+        "To_Trains": 23634,
+        "From_Trains": 24635,
+        "Total": 48269,
+        "Opened": 1037941200000,
+        "Line": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.406489999999962, 43.74484700000005]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "York Mills",
+        "To_Trains": 12609,
+        "From_Trains": 12886,
+        "Total": 25495,
+        "Opened": 102315600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.40268999999995, 43.725948000000074]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Lawrence",
+        "To_Trains": 12443,
+        "From_Trains": 11423,
+        "Total": 23866,
+        "Opened": 102315600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.39864799999998, 43.705227000000036]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Eglinton",
+        "To_Trains": 38799,
+        "From_Trains": 39966,
+        "Total": 78765,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.396988999999962, 43.697748000000047]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Davisville",
+        "To_Trains": 11290,
+        "From_Trains": 12722,
+        "Total": 24012,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.392588999999987, 43.687748000000056]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "St. Clair",
+        "To_Trains": 19249,
+        "From_Trains": 20634,
+        "Total": 39883,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.391175999999973, 43.682634000000064]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Summerhill",
+        "To_Trains": 3125,
+        "From_Trains": 2751,
+        "Total": 5876,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.388787999999977, 43.676748000000032]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Rosedale",
+        "To_Trains": 3473,
+        "From_Trains": 3520,
+        "Total": 6993,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.385917999999947, 43.671043000000054]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Bloor (line 1, Y-U-S)",
+        "To_Trains": 101588,
+        "From_Trains": 109691,
+        "Total": 211279,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.383387999999968, 43.665348000000051]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Wellesley",
+        "To_Trains": 11211,
+        "From_Trains": 13128,
+        "Total": 24339,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.383102999999949, 43.660789000000079]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "Wheelchair_Access": "No",
+        "Station_Name": "College",
+        "To_Trains": 23588,
+        "From_Trains": 24109,
+        "Total": 47697,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.381224999999972, 43.656517000000065]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Dundas",
+        "To_Trains": 30770,
+        "From_Trains": 30922,
+        "Total": 61692,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.379615999999942, 43.652738000000056]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Queen",
+        "To_Trains": 25793,
+        "From_Trains": 26145,
+        "Total": 51938,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.378108999999938, 43.649061000000074]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "Wheelchair_Access": "No",
+        "Station_Name": "King",
+        "To_Trains": 25680,
+        "From_Trains": 33515,
+        "Total": 59195,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.440795999999978, 43.708582000000035]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Glencairn",
+        "To_Trains": 2958,
+        "From_Trains": 2543,
+        "Total": 5501,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.447692999999958, 43.724595000000079]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Yorkdale",
+        "To_Trains": 13578,
+        "From_Trains": 15506,
+        "Total": 29084,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.46278099999995, 43.750204000000053]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Downsview",
+        "To_Trains": 19536,
+        "From_Trains": 19217,
+        "Total": 38753,
+        "Opened": 828248400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.450791999999979, 43.734547000000077]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Wilson",
+        "To_Trains": 11266,
+        "From_Trains": 12150,
+        "Total": 23416,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.444190999999989, 43.716347000000042]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Lawrence West",
+        "To_Trains": 11323,
+        "From_Trains": 11584,
+        "Total": 22907,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.436090999999976, 43.699148000000037]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Eglinton West",
+        "To_Trains": 10557,
+        "From_Trains": 11092,
+        "Total": 21649,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.415889999999933, 43.684048000000075]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "Wheelchair_Access": "No",
+        "Station_Name": "St. Clair West",
+        "To_Trains": 14931,
+        "From_Trains": 16508,
+        "Total": 31439,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.407118999999966, 43.674303000000066]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Dupont",
+        "To_Trains": 7711,
+        "From_Trains": 6842,
+        "Total": 14553,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.403788999999961, 43.667148000000054]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Spadina (line 1, Y-U-S)",
+        "To_Trains": 6825,
+        "From_Trains": 6841,
+        "Total": 13666,
+        "Opened": 254725200000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.39808899999997, 43.668848000000025]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "St. George (line 2, B-D)",
+        "To_Trains": 63299,
+        "From_Trains": 65645,
+        "Total": 128944,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.393466999999987, 43.666621000000077]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Museum",
+        "To_Trains": 4260,
+        "From_Trains": 4031,
+        "Total": 8291,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.39068999999995, 43.659834000000046]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Queen's Park",
+        "To_Trains": 23959,
+        "From_Trains": 22332,
+        "Total": 46291,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.388224999999977, 43.654618000000028]
+      },
+      "properties": {
+        "OBJECTID": 29,
+        "Wheelchair_Access": "No",
+        "Station_Name": "St. Patrick",
+        "To_Trains": 17824,
+        "From_Trains": 17701,
+        "Total": 35525,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.386958999999933, 43.651122000000043]
+      },
+      "properties": {
+        "OBJECTID": 30,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Osgoode",
+        "To_Trains": 11909,
+        "From_Trains": 11812,
+        "Total": 23721,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.385003999999981, 43.647605000000055]
+      },
+      "properties": {
+        "OBJECTID": 31,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "St. Andrew",
+        "To_Trains": 26475,
+        "From_Trains": 26197,
+        "Total": 52672,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.379222999999968, 43.64565900000008]
+      },
+      "properties": {
+        "OBJECTID": 32,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Union",
+        "To_Trains": 56246,
+        "From_Trains": 58554,
+        "Total": 114800,
+        "Opened": -497300400000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.466747999999939, 43.654003000000046]
+      },
+      "properties": {
+        "OBJECTID": 33,
+        "Wheelchair_Access": "No",
+        "Station_Name": "High Park",
+        "To_Trains": 5579,
+        "From_Trains": 5844,
+        "Total": 11423,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.39808899999997, 43.668848000000025]
+      },
+      "properties": {
+        "OBJECTID": 34,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "St. George (line 1, Y-U-S)",
+        "To_Trains": 60627,
+        "From_Trains": 65369,
+        "Total": 125996,
+        "Opened": -215895600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.330285999999944, 43.682648000000029]
+      },
+      "properties": {
+        "OBJECTID": 35,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Greenwood",
+        "To_Trains": 4739,
+        "From_Trains": 4892,
+        "Total": 9631,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.27958499999994, 43.711648000000025]
+      },
+      "properties": {
+        "OBJECTID": 36,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Warden",
+        "To_Trains": 14626,
+        "From_Trains": 16583,
+        "Total": 31209,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.288984999999968, 43.694448000000079]
+      },
+      "properties": {
+        "OBJECTID": 37,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Victoria Park",
+        "To_Trains": 14316,
+        "From_Trains": 14962,
+        "Total": 29278,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.301584999999989, 43.688948000000039]
+      },
+      "properties": {
+        "OBJECTID": 38,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Main Street",
+        "To_Trains": 11375,
+        "From_Trains": 14661,
+        "Total": 26036,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.312685999999985, 43.686548000000073]
+      },
+      "properties": {
+        "OBJECTID": 39,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Woodbine",
+        "To_Trains": 7140,
+        "From_Trains": 7736,
+        "Total": 14876,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.322785999999951, 43.68414800000005]
+      },
+      "properties": {
+        "OBJECTID": 40,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Coxwell",
+        "To_Trains": 8169,
+        "From_Trains": 9489,
+        "Total": 17658,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.337785999999937, 43.681048000000033]
+      },
+      "properties": {
+        "OBJECTID": 41,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Donlands",
+        "To_Trains": 5283,
+        "From_Trains": 5132,
+        "Total": 10415,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.34478699999994, 43.680148000000031]
+      },
+      "properties": {
+        "OBJECTID": 42,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Pape",
+        "To_Trains": 12621,
+        "From_Trains": 13781,
+        "Total": 26402,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.352496999999971, 43.678239000000076]
+      },
+      "properties": {
+        "OBJECTID": 43,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Chester",
+        "To_Trains": 3531,
+        "From_Trains": 3745,
+        "Total": 7276,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.358386999999937, 43.676948000000039]
+      },
+      "properties": {
+        "OBJECTID": 44,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Broadview",
+        "To_Trains": 14416,
+        "From_Trains": 16128,
+        "Total": 30544,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.368987999999945, 43.673748000000046]
+      },
+      "properties": {
+        "OBJECTID": 45,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Castle Frank",
+        "To_Trains": 3852,
+        "From_Trains": 3974,
+        "Total": 7826,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.376160999999968, 43.67210300000005]
+      },
+      "properties": {
+        "OBJECTID": 46,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Sherbourne",
+        "To_Trains": 12006,
+        "From_Trains": 14124,
+        "Total": 26130,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.385954999999967, 43.670993000000067]
+      },
+      "properties": {
+        "OBJECTID": 47,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Yonge (line 2, B-D)",
+        "To_Trains": 98178,
+        "From_Trains": 94852,
+        "Total": 193030,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.391128999999978, 43.669946000000039]
+      },
+      "properties": {
+        "OBJECTID": 48,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Bay",
+        "To_Trains": 16077,
+        "From_Trains": 16538,
+        "Total": 32615,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.403788999999961, 43.667148000000054]
+      },
+      "properties": {
+        "OBJECTID": 49,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Spadina (line 2, B-D)",
+        "To_Trains": 17790,
+        "From_Trains": 17329,
+        "Total": 35119,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.411188999999979, 43.666448000000059]
+      },
+      "properties": {
+        "OBJECTID": 50,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Bathurst",
+        "To_Trains": 15370,
+        "From_Trains": 20666,
+        "Total": 36036,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.418394999999975, 43.664275000000032]
+      },
+      "properties": {
+        "OBJECTID": 51,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Christie",
+        "To_Trains": 6280,
+        "From_Trains": 6649,
+        "Total": 12929,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.426289999999938, 43.66244800000004]
+      },
+      "properties": {
+        "OBJECTID": 52,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Ossington",
+        "To_Trains": 14171,
+        "From_Trains": 17299,
+        "Total": 31470,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.435476999999935, 43.660199000000034]
+      },
+      "properties": {
+        "OBJECTID": 53,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Dufferin",
+        "To_Trains": 14684,
+        "From_Trains": 14271,
+        "Total": 28955,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.442462999999975, 43.659246000000053]
+      },
+      "properties": {
+        "OBJECTID": 54,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Lansdowne",
+        "To_Trains": 8946,
+        "From_Trains": 7928,
+        "Total": 16874,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.452722999999935, 43.657023000000038]
+      },
+      "properties": {
+        "OBJECTID": 55,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Dundas West",
+        "To_Trains": 13370,
+        "From_Trains": 13927,
+        "Total": 27297,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.459890999999971, 43.655248000000029]
+      },
+      "properties": {
+        "OBJECTID": 56,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Keele",
+        "To_Trains": 7488,
+        "From_Trains": 8243,
+        "Total": 15731,
+        "Opened": -121460400000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.475990999999965, 43.652048000000036]
+      },
+      "properties": {
+        "OBJECTID": 57,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Runnymede",
+        "To_Trains": 8878,
+        "From_Trains": 10187,
+        "Total": 19065,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.483891999999969, 43.650148000000058]
+      },
+      "properties": {
+        "OBJECTID": 58,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Jane",
+        "To_Trains": 8193,
+        "From_Trains": 8884,
+        "Total": 17077,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.495091999999943, 43.650148000000058]
+      },
+      "properties": {
+        "OBJECTID": 59,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Old Mill",
+        "To_Trains": 3397,
+        "From_Trains": 3178,
+        "Total": 6575,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.510992999999985, 43.648348000000055]
+      },
+      "properties": {
+        "OBJECTID": 60,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Royal York",
+        "To_Trains": 10067,
+        "From_Trains": 10599,
+        "Total": 20666,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.524191999999971, 43.645147000000065]
+      },
+      "properties": {
+        "OBJECTID": 61,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Islington",
+        "To_Trains": 16676,
+        "From_Trains": 21925,
+        "Total": 38601,
+        "Opened": -51912000000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.535992999999962, 43.637148000000025]
+      },
+      "properties": {
+        "OBJECTID": 62,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Kipling",
+        "To_Trains": 28022,
+        "From_Trains": 26760,
+        "Total": 54782,
+        "Opened": 343630800000,
+        "Line": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.411690999999962, 43.761647000000039]
+      },
+      "properties": {
+        "OBJECTID": 63,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Sheppard-Yonge (line 1, Y-U-S)",
+        "To_Trains": 37592,
+        "From_Trains": 39227,
+        "Total": 76819,
+        "Opened": 133761600000,
+        "Line": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.346588999999938, 43.775547000000074]
+      },
+      "properties": {
+        "OBJECTID": 64,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Don Mills",
+        "To_Trains": 14514,
+        "From_Trains": 16242,
+        "Total": 30756,
+        "Opened": 1037941200000,
+        "Line": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.367788999999959, 43.77084700000006]
+      },
+      "properties": {
+        "OBJECTID": 65,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Leslie",
+        "To_Trains": 2632,
+        "From_Trains": 2857,
+        "Total": 5489,
+        "Opened": 1037941200000,
+        "Line": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.376310999999987, 43.769201000000066]
+      },
+      "properties": {
+        "OBJECTID": 66,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Bessarion",
+        "To_Trains": 1266,
+        "From_Trains": 1267,
+        "Total": 2533,
+        "Opened": 1037941200000,
+        "Line": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.386702999999954, 43.766871000000037]
+      },
+      "properties": {
+        "OBJECTID": 67,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Bayview",
+        "To_Trains": 4716,
+        "From_Trains": 4678,
+        "Total": 9394,
+        "Opened": 1037941200000,
+        "Line": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.251653999999974, 43.774882000000048]
+      },
+      "properties": {
+        "OBJECTID": 68,
+        "Wheelchair_Access": "No",
+        "Station_Name": "McCowan",
+        "To_Trains": 3289,
+        "From_Trains": 1388,
+        "Total": 4677,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.257284999999968, 43.77464800000007]
+      },
+      "properties": {
+        "OBJECTID": 69,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Scarborough Centre",
+        "To_Trains": 11426,
+        "From_Trains": 14212,
+        "Total": 25638,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.272178999999937, 43.770400000000052]
+      },
+      "properties": {
+        "OBJECTID": 70,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Midland",
+        "To_Trains": 1671,
+        "From_Trains": 1215,
+        "Total": 2886,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.276506999999981, 43.766714000000036]
+      },
+      "properties": {
+        "OBJECTID": 71,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Ellesmere",
+        "To_Trains": 624,
+        "From_Trains": 566,
+        "Total": 1190,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.270435999999961, 43.750475000000051]
+      },
+      "properties": {
+        "OBJECTID": 72,
+        "Wheelchair_Access": "No",
+        "Station_Name": "Lawrence East",
+        "To_Trains": 4533,
+        "From_Trains": 3862,
+        "Total": 8395,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.263883999999962, 43.732248000000027]
+      },
+      "properties": {
+        "OBJECTID": 73,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Kennedy (line 3, SRT)",
+        "To_Trains": 17810,
+        "From_Trains": 19382,
+        "Total": 37192,
+        "Opened": 480315600000,
+        "Line": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.263883999999962, 43.732248000000027]
+      },
+      "properties": {
+        "OBJECTID": 74,
+        "Wheelchair_Access": "Yes",
+        "Station_Name": "Kennedy (line 2, B-D)",
+        "To_Trains": 33652,
+        "From_Trains": 37242,
+        "Total": 70894,
+        "Opened": 343630800000,
+        "Line": 2
+      }
+    }
+  ]
+}
