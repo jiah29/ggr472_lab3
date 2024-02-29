@@ -6,6 +6,10 @@
 // Created by Jia Hao Choo for GGR472 Lab 2 (Winter 2024)
 // ============================================================================
 
+/* ----------------------------------------------------------------------------
+Mapbox map, sources and layers setup
+---------------------------------------------------------------------------- */
+
 // access token for mapbox
 mapboxgl.accessToken =
   "pk.eyJ1IjoiamlhaGFvMjkiLCJhIjoiY2xyNHhudjJsMDFrajJxbWp6ZHlqamR2MyJ9.GLj7pIC0m-_eGRtGH4AJww";
@@ -47,16 +51,10 @@ map.on("load", () => {
   // Add the geocoder to the sidebar
   document.getElementById("geocoder").appendChild(geocoder.onAdd(map));
 
-  // Add station ridership geojson data source from uploaded github file
+  // Add station ridership data geojson data source from uploaded github file
   map.addSource("stations-data", {
     type: "geojson",
     data: "https://jiah29.github.io/ggr472_lab3/data/TorontoSubwayStationsRidership.geojson",
-  });
-
-  // Add subway routes geojson data source from uploaded github file
-  map.addSource("routes-data", {
-    type: "geojson",
-    data: "https://jiah29.github.io/ggr472_lab3/data/TorontoSubwayRoutes.geojson",
   });
 
   // Add station ridership data layer to the map
@@ -95,7 +93,8 @@ map.on("load", () => {
     filter: ["in", "Line", ...shownLine],
   });
 
-  // Add another layer from the same source for highlighting purpose when mouse hovers over one station
+  // Add another layer from the same station ridership data source for highlighting purpose
+  // when mouse hovers over one station
   map.addLayer({
     id: "stations-highlight",
     type: "circle",
@@ -125,7 +124,8 @@ map.on("load", () => {
     filter: ["in", "Line", ...shownLine],
   });
 
-  // Add another layer from the same source with text symbol for each station's total ridership
+  // Add another layer from the same station ridership data source with text symbol
+  // to show the total ridership number for each station
   map.addLayer({
     id: "ridership-number",
     type: "symbol",
@@ -154,6 +154,12 @@ map.on("load", () => {
     minzoom: 14,
     // add initial filter to only show stations specified in the shownLine array
     filter: ["in", "Line", ...shownLine],
+  });
+
+  // Add subway routes geojson data source from uploaded github file
+  map.addSource("routes-data", {
+    type: "geojson",
+    data: "https://jiah29.github.io/ggr472_lab3/data/TorontoSubwayRoutes.geojson",
   });
 
   // Add subway routes data layer to the map
@@ -200,6 +206,10 @@ map.on("load", () => {
     "stations-highlight"
   );
 });
+
+/* ----------------------------------------------------------------------------
+HTML event listeners for map manipulation
+---------------------------------------------------------------------------- */
 
 // Add event listener to all subway line checkbox in sidebar for filtering out subway lines data on map
 for (let i = 1; i <= 4; i++) {
@@ -250,6 +260,10 @@ document
       map.setLayoutProperty("routes", "visibility", "none");
     }
   });
+
+/* ----------------------------------------------------------------------------
+Map object event listeners for map manipulation
+---------------------------------------------------------------------------- */
 
 // Adding on hover event listener to the stations layer - when mouse enters the station
 map.on("mouseenter", "stations", (e) => {
