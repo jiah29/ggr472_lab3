@@ -19,6 +19,8 @@ const map = new mapboxgl.Map({
   zoom: 11, // starting zoom level
 });
 
+// variable to keep track of which subway lines are currently shown on the map
+// by default, all subway lines are shown
 var shownLine = [1, 2, 3, 4];
 
 // functions that trigger when the map is loaded
@@ -370,10 +372,11 @@ map.on("mouseleave", "routes", () => {
 });
 
 /* ----------------------------------------------------------------------------
-Dynamically add legend items to the map
+Functions for creating dynamic map legend items
 ---------------------------------------------------------------------------- */
 
-// Function to reset the legend after changes to the map
+// Function to reset the legend after changes to the map;
+// used in event listeners for HTML elements which changes map content
 function resetLegend() {
   // always clear the legend container before adding new legend items
   clearLegend();
@@ -389,13 +392,13 @@ function resetLegend() {
   }
 }
 
-// Function to clear the legend container
+// Helper function to clear the legend container
 function clearLegend() {
   document.getElementById("legend").innerHTML = "";
 }
 
-// Function to add subway line legend items to the map based on which subway lines are shown
-// on the map currently
+// Helper function to add subway line legend items to the map based on
+// which subway lines are shown on the map currently
 function addSubwayLineLegend() {
   // create a legend group
   const legendGroup = document.createElement("div");
@@ -448,7 +451,7 @@ function addSubwayLineLegend() {
   document.getElementById("legend").appendChild(legendGroup);
 }
 
-// Function to add subway station ridership legend items to the map
+// Helper function to add subway station ridership legend items to the map
 function addRidershipLegend() {
   // create a legend group
   const legendGroup = document.createElement("div");
@@ -468,6 +471,7 @@ function addRidershipLegend() {
   document.getElementById("legend").appendChild(legendGroup);
 }
 
+// Helper function to create a legend item for subway station ridership legend group
 function createStationsRidershipLegendItem(whichBound) {
   // create the legend itm
   const legendItem = document.createElement("div");
