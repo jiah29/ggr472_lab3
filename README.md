@@ -28,3 +28,8 @@ Here are the interactivity and dynamic styling features implemented:
 - Lastly, there are map controls within the map interface itself:
   - There is a navigation control and a scale control on the bottom right of the map.
   - There is a full screen control on the top right of the map, which allows users to view the map in full screen mode.
+
+There is also a legend that is dynamically added to the bottom left of map.
+
+- The legend will only show the legend for features that are currently visible on the map, so when the user toggle on or off a layer, the legend will update accordingly.
+- For subway lines legend items, it also only shows the currently visible subway lines.
