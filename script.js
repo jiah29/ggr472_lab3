@@ -101,10 +101,10 @@ map.on("load", () => {
         "interpolate",
         ["linear"],
         ["get", "Total"],
-        // if total ridership is less than 1000, radius would be 5 (min)
+        // if total ridership is less than 1000, radius would be 10 (min)
         1000,
         10,
-        // if total ridership is more than 100000, radius would be total ridership / 12000 (max)
+        // if total ridership is more than 100000, radius would be total ridership / 10000 (max)
         100000,
         ["/", ["get", "Total"], 10000],
       ],
@@ -378,14 +378,12 @@ function resetLegend() {
   // always clear the legend container before adding new legend items
   clearLegend();
 
-  // if subway lines features are shown on the map, add subway line legend items to the map
-  // check the checkbox to see if the subway lines are shown
+  // if subway lines features are shown on the map, add it
   if (document.getElementById("routes-toggle").checked) {
     addSubwayLineLegend();
   }
 
-  // if subway stations features are shown on the map, add subway station ridership legend items to the map
-  // check the checkbox to see if the subway stations are shown
+  // if subway stations features are shown on the map, add it
   if (document.getElementById("stations-toggle").checked) {
     addRidershipLegend();
   }
@@ -478,17 +476,20 @@ function createStationsRidershipLegendItem(whichBound) {
   var iconSize;
   var iconColor;
   var labelText;
+  var topPosition;
 
   if (whichBound === "lowerBound") {
     // if we are creating the lower bound legend item
-    iconSize = "5px";
+    iconSize = "10px";
     iconColor = "#d3d3d3";
     labelText = "<= 1000";
+    topPosition = "1px";
   } else {
     // if we are creating the upper bound legend item
     iconSize = "20px";
     iconColor = "#000000";
-    labelText = ">= 10000";
+    labelText = ">= 100000";
+    topPosition = "5px";
   }
 
   // create a legend icon for the legend item
@@ -504,6 +505,9 @@ function createStationsRidershipLegendItem(whichBound) {
   legendIcon.style.display = "inline-block";
   // set margin-right to separate the legend icon and the text
   legendIcon.style.marginRight = "5px";
+  // center the legend icon vertically with the text
+  legendIcon.style.position = "relative";
+  legendIcon.style.top = topPosition;
   // append the legend icon to the legend item
   legendItem.appendChild(legendIcon);
 
