@@ -16,7 +16,7 @@
 
 /* Styling for sidebar container*/
 #sidebar-container {
-  height: 100vh; /** Make sidebar full height of screen */
+  height: 100%;
   /** Add padding to sidebar to give space between sidebar and screen edges */
   padding-left: 2rem;
   padding-top: 1rem;
@@ -56,6 +56,6 @@
   .map-container {
     /** Make sure it takes up full width and height of main content */
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 }
