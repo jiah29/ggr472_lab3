@@ -46,16 +46,32 @@
   }
 }
 
-/* Styling for main map section and map container*/
+/* Styling for main map section*/
 #main-content {
   /* Remove existing padding in map section to remove whitespace at the sides */
   padding-left: 0;
   padding-right: 0;
+  /* Change position to relative to allow absolute positioning of legend */
+  position: relative;
 
   /* Styling for map container */
   .map-container {
     /** Make sure it takes up full width and height of main content */
     width: 100%;
     height: 100%;
+  }
+
+  /* Styling for legend container*/
+  .legend-container {
+    /** background color for legend */
+    background-color: #f8f9fa;
+    /** overlap legend on top of map */
+    z-index: 2;
+    /* absolute positioning relative to main content */
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    /** padding inside legend container */
+    padding: 10px;
   }
 }

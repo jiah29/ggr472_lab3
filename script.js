@@ -226,6 +226,12 @@ for (let i = 1; i <= 4; i++) {
     map.setFilter("ridership-number", ["in", "Line", ...shownLine]);
     // update the filter for lines layer
     map.setFilter("routes", ["in", "Line", ...shownLine]);
+
+    // sort the shownLine array to maintain the order of the subway lines
+    shownLine.sort();
+
+    // reset the legend container after changes to the map
+    resetLegend();
   });
 }
 
@@ -242,6 +248,9 @@ document
       map.setLayoutProperty("stations", "visibility", "none");
       map.setLayoutProperty("ridership-number", "visibility", "none");
     }
+
+    // reset the legend container after changes to the map
+    resetLegend();
   });
 
 // Add event listener for subway routes layer toggle button in sidebar
@@ -255,6 +264,9 @@ document
       // if the toggle button is unchecked, hide the routes layer
       map.setLayoutProperty("routes", "visibility", "none");
     }
+
+    // reset the legend container after changes to the map
+    resetLegend();
   });
 
 /* ----------------------------------------------------------------------------
@@ -356,3 +368,156 @@ map.on("mouseleave", "routes", () => {
   // reset the hoveredRouteId to null
   hoveredRouteId = null;
 });
+
+/* ----------------------------------------------------------------------------
+Dynamically add legend items to the map
+---------------------------------------------------------------------------- */
+
+// Function to reset the legend after changes to the map
+function resetLegend() {
+  // always clear the legend container before adding new legend items
+  clearLegend();
+
+  // if subway lines features are shown on the map, add subway line legend items to the map
+  // check the checkbox to see if the subway lines are shown
+  if (document.getElementById("routes-toggle").checked) {
+    addSubwayLineLegend();
+  }
+
+  // if subway stations features are shown on the map, add subway station ridership legend items to the map
+  // check the checkbox to see if the subway stations are shown
+  if (document.getElementById("stations-toggle").checked) {
+    addRidershipLegend();
+  }
+}
+
+// Function to clear the legend container
+function clearLegend() {
+  document.getElementById("legend").innerHTML = "";
+}
+
+// Function to add subway line legend items to the map based on which subway lines are shown
+// on the map currently
+function addSubwayLineLegend() {
+  // create a legend group
+  const legendGroup = document.createElement("div");
+  // set id of the legend group
+  legendGroup.id = "subway-lines-legend";
+  // add margin to the bottom of the legend group
+  legendGroup.style.marginBottom = "5px";
+  // create a legend group title
+  const legendTitle = document.createElement("h6");
+  legendTitle.textContent = "Subway Routes";
+  legendGroup.appendChild(legendTitle);
+
+  // loop through the shownLine array
+  shownLine.forEach((i) => {
+    // only add legend items for the subway lines that are currently shown on the map
+    // legend item is a line element with color and text specifying the line number
+    const legendItem = document.createElement("div");
+
+    // create a color box for the line element
+    const lineColorBox = document.createElement("div");
+    // set the size of the color box to make it looks like a line
+    lineColorBox.style.width = "50px";
+    lineColorBox.style.height = "2px";
+    // make it inline with the text
+    lineColorBox.style.display = "inline-block";
+    // set margin-right to separate the color box and the text
+    lineColorBox.style.marginRight = "5px";
+    // adjust position to move line up to make it aligned center with the text vertically
+    lineColorBox.style.position = "relative";
+    lineColorBox.style.top = "-5px";
+    // set the color of the color box based on the line number
+    lineColorBox.style.backgroundColor = ["yellow", "green", "blue", "red"][
+      i - 1
+    ];
+    // append the color box to the legend item
+    legendItem.appendChild(lineColorBox);
+
+    // create the text beside the line element
+    const legendText = document.createElement("p");
+    // make the text inline with the color box
+    legendText.style.display = "inline";
+    legendText.textContent = `Line ${i}`;
+    legendItem.appendChild(legendText);
+
+    // append the legend item to the legend group
+    legendGroup.appendChild(legendItem);
+  });
+
+  // add legend group to legend container
+  document.getElementById("legend").appendChild(legendGroup);
+}
+
+// Function to add subway station ridership legend items to the map
+function addRidershipLegend() {
+  // create a legend group
+  const legendGroup = document.createElement("div");
+  // set id of the legend group
+  legendGroup.id = "subway-stations-legend";
+  // create a legend group title
+  const legendTitle = document.createElement("h6");
+  legendTitle.textContent = "Station Ridership";
+  legendGroup.appendChild(legendTitle);
+
+  // append the lower bound legend item to the legend group
+  legendGroup.appendChild(createStationsRidershipLegendItem("lowerBound"));
+  // append the upper bound legend item to the legend group
+  legendGroup.appendChild(createStationsRidershipLegendItem("upperBound"));
+
+  // add legend group to legend container
+  document.getElementById("legend").appendChild(legendGroup);
+}
+
+function createStationsRidershipLegendItem(whichBound) {
+  // create the legend itm
+  const legendItem = document.createElement("div");
+
+  // variables to set based on which bound we are creating the legend item for
+  var iconSize;
+  var iconColor;
+  var labelText;
+
+  if (whichBound === "lowerBound") {
+    // if we are creating the lower bound legend item
+    iconSize = "5px";
+    iconColor = "#d3d3d3";
+    labelText = "<= 1000";
+  } else {
+    // if we are creating the upper bound legend item
+    iconSize = "20px";
+    iconColor = "#000000";
+    labelText = ">= 10000";
+  }
+
+  // create a legend icon for the legend item
+  const legendIcon = document.createElement("div");
+  // set the size of the legend icon
+  legendIcon.style.width = iconSize;
+  legendIcon.style.height = iconSize;
+  // set the color of the legend icon to light grey
+  legendIcon.style.backgroundColor = iconColor;
+  // make it a circle
+  legendIcon.style.borderRadius = "50%";
+  // make it inline with the text
+  legendIcon.style.display = "inline-block";
+  // set margin-right to separate the legend icon and the text
+  legendIcon.style.marginRight = "5px";
+  // append the legend icon to the legend item
+  legendItem.appendChild(legendIcon);
+
+  // create a label for the legend item
+  const legendLabel = document.createElement("p");
+  // make the text inline with the legend icon
+  legendLabel.style.display = "inline";
+  legendLabel.textContent = labelText;
+  // append the label to the legend item
+  legendItem.appendChild(legendLabel);
+
+  return legendItem;
+}
+
+// By default, add all legend items to the map
+addSubwayLineLegend();
+addRidershipLegend();
