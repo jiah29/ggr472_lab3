@@ -29,6 +29,14 @@ map.on("load", () => {
   // Add zoom and rotation controls to the map.
   map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
 
+  // Add fullscreen control to the map
+  map.addControl(
+    new mapboxgl.FullscreenControl({
+      container: document.querySelector("main-content"),
+    }),
+    "top-right"
+  );
+
   // Define a new geocoder object
   const geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
