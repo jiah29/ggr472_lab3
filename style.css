@@ -18,7 +18,7 @@
 #sidebar-container {
   height: 100vh; /** Make sidebar full height of screen */
   /** Add padding to sidebar to give space between sidebar and screen edges */
-  padding-left: 2.3rem;
+  padding-left: 1.5rem;
   padding-top: 1rem;
   /** Border to separate sidebar from main content */
   border-right: solid 1px #d3d3d3;
