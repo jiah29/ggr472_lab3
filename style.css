@@ -5,6 +5,7 @@
 
 /* Styling for navbar */
 .navbar {
+  /* Border to separate navbar content below */
   border-bottom: solid 1px #d3d3d3;
 
   /* Center navbar title */
@@ -15,39 +16,45 @@
 
 /* Styling for sidebar container*/
 #sidebar-container {
-  height: 100vh;
-  padding-left: 2.5rem;
+  height: 100vh; /** Make sidebar full height of screen */
+  /** Add padding to sidebar to give space between sidebar and screen edges */
+  padding-left: 2.3rem;
   padding-top: 1rem;
+  /** Border to separate sidebar from main content */
   border-right: solid 1px #d3d3d3;
 
   /** Styling for horizontal line in sidebar*/
   hr {
     height: 2px;
-    width: 100%;
+    width: 100%; /** make line full width of side bar*/
   }
 
   /** Styling for heading in sidebar */
   #heading {
     font-weight: bolder;
     font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
+    width: 100%; /** make heading full width of side bar*/
+    text-align: center; /** center heading */
+    /** Give margin space between heading and other items */
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
   /** Styling for sidebar items */
   .sidebar-item {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /** Give margin space between items */
   }
 }
 
 /* Styling for main map section and map container*/
 #main-content {
+  /* Remove existing padding in map section to remove whitespace at the sides */
   padding-left: 0;
   padding-right: 0;
 
+  /* Styling for map container */
   .map-container {
+    /** Make sure it takes up full width and height of main content */
     width: 100%;
     height: 100vh;
   }
