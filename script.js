@@ -23,20 +23,11 @@ var shownLine = [1, 2, 3, 4];
 
 // functions that trigger when the map is loaded
 map.on("load", () => {
-  // Add zoom and rotation controls to the map.
-  map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
-
-  // Add enter full screen control to allow the section
-  // with id = fullscreen-section to enter full screen
-  map.addControl(
-    new mapboxgl.FullscreenControl({
-      container: document.getElementById("fullscreen-section"),
-    }),
-    "bottom-right"
-  );
-
   // Add a scale control to the map
   map.addControl(new mapboxgl.ScaleControl(), "bottom-right");
+
+  // Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
 
   // Define a new geocoder object
   const geocoder = new MapboxGeocoder({
