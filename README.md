@@ -1,4 +1,4 @@
-# ggr472_lab3
+# GGR472 Lab 3 - TTC Subway Routes & Stations
 
 GGR472 Lab 3 - Jia Hao Choo
 
