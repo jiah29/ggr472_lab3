@@ -66,10 +66,10 @@ map.on("load", () => {
         "interpolate",
         ["linear"],
         ["get", "Total"],
-        // if total ridership is less than 1000, radius would be 5 (min)
+        // if total ridership is less than 1000, radius would be 10 (min)
         1000,
         10,
-        // if total ridership is more than 100000, radius would be total ridership / 12000 (max)
+        // if total ridership is more than 100000, radius would be total ridership / 10000 (max)
         100000,
         ["/", ["get", "Total"], 10000],
       ],
